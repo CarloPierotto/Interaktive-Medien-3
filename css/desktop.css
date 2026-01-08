@@ -1,0 +1,63 @@
+@media (min-width: 1024px) {
+
+    /* - - - - - - - - Web-Applikation - - - - - - - */
+
+    .locationInfo {
+        flex-direction: row;
+        align-items: center;
+        gap: 0;
+    }
+
+    .locationTitle {
+        display: flex;
+        align-items: center;
+        
+    }
+
+    .locationTitle::after {
+        content: '';
+        width: 4px;
+        height: 4px;
+        background-color: var(--bright-stone);
+        border-radius: 50%;
+        margin: 0 5px;
+    }
+    
+    .chart-wrapper {
+        width: 600px;
+        margin-left: 25px;
+    }
+  
+    /* - - - - - - - - About - - - - - - - */
+
+    .who-we-are, .about {
+        flex: 1;
+    }
+
+    .who-we-are {
+        max-width: 500px;
+    }
+
+    .about {
+    max-width: 500px;
+    }
+
+    .teamMembers {
+            margin: 50px 0 50px 50px;
+    }
+
+    .teamMembers img {
+        width: 150px;
+        height: 150px;
+
+    }
+
+    .info-container {
+        display: flex;
+        flex-direction: row;
+        gap: 100px;
+        align-items: flex-start;
+        margin-top: -50px;
+    }
+
+}

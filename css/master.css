@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --onyx: #282828;
+  --blood: #c60b0e;
+  --stone: #817d63;
+  --pearl: #fafafa;
+  --bright-stone: #b6b4a5;
+  --fog: #d9d9d9;
+  font-size: 16px;
+  color: var(--onyx);
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+}
+
+body {
+    color: var(--onyx);
+    background-color: var(--pearl);
+}
+
+main {
+  margin: 0;
+}
+
+main:not(.web-app-page) {
+    max-width: 1200px;
+}
+
+/* Links */
+
+a {
+    color: var(--blood);
+    text-decoration: none;
+    font-family: 'Roboto slab', serif;
+}
+
+p a:hover,
+footer nav li a:hover {
+    border-bottom: var(--blood) 1 px dotted;
+}
+
+button:not(.nav-btn) {
+    background-color: var(--blood);
+    border: none;
+    border-radius: 7.5px;
+    margin: 15px 0;
+}
+
+button a {
+    color: var(--pearl);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px;;
+}
+
+/* Headings */
+
+h1,
+.h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+h2,
+.h2 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+    font-weight: 500;
+}

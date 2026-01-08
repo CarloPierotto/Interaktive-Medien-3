@@ -1,0 +1,317 @@
+/* - - - - - - - - Header - - - - - - - */
+
+header {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: var(--pearl);
+}
+
+header img {
+    width: 100px;
+}
+/* Link to about page */
+.index-header a {
+    position: absolute;
+    right: 30px;
+
+    font-family: 'Roboto Slab', serif;
+    font-weight: 600;
+
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--stone);
+    border-radius: 50%;
+    color: var(--stone);
+}
+
+.index-header a:hover {
+    color: var(--blood);
+    border-color: var(--blood);
+}
+
+/* Link to index page */
+.info-header a {
+    position: absolute;
+    right: 30px;
+
+    font-family: 'Roboto', serif;
+    font-weight: 400;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--stone);
+}
+
+.info-header a:hover {
+    color: var(--blood);
+    border-color: var(--blood);
+}
+
+/* - - - - - - - - Main - - - - - - - */
+
+main {
+    height: 86vh;
+}
+
+main:not(.web-app-page) {
+    max-width: 1200px;;
+    width: 85vw;
+    margin: 0 auto;
+}
+
+/* - - - - - - - - Footer - - - - - - - */
+
+.info-footer p {
+    font-size: 0.8rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 350;
+    text-align: center;
+    margin-top: 3px;
+}
+
+.info-footer p a {
+    color: var(--stone);
+}
+
+.info-footer p a:hover {
+    color: var(--blood);
+}
+
+/* - - - - - - - - Web-Applkiation - - - - - - - */
+
+.web-app-page {
+    width: 100vw;
+}
+
+/*leaflet Karte*/
+#map { 
+    height: 90vh; /* Ohne Höhe keine Karte! */
+    width: 100vw;   /* Breite passt sich dem Container an */
+    background-color: var(--bright-stone); /* Hellgrau als Platzhalter */
+}
+
+/* Versteckt Leaflet-Credits */
+.leaflet-control-attribution {
+    display: none;
+}
+
+/* Chart Wrapper für die Diagramme unten */
+.chart-wrapper {
+    width: 100vw;
+    margin: 0 auto; 
+    
+    background-color: var(--pearl);
+    position: fixed;
+    z-index: 1000;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* Startposition: 100% nach unten verschoben (aus dem Bild) */
+    transform: translateY(100%); 
+    
+    /* Animation, sanftes Ein/Aus */
+    transition: transform 0.5s ease-in-out;
+
+    border-radius: 25px 25px 0 0;
+}
+
+/* Neue Klasse für den sichtbaren Zustand */
+.chart-wrapper.open {
+    transform: translateY(0); /* Zurück auf Originalposition */
+}
+
+select { 
+    padding: 10px; 
+    font-size: 16px; 
+    margin-bottom: 20px; 
+    border-radius: 8px; 
+    border: 1px solid var(--stone); 
+    background: var(--pearl);
+}
+
+.location {
+    display: flex;
+    justify-content: left; /* Zentriert die ganze Gruppe Horizontal */
+    align-items: center;     /* Zentriert sie Vertikal zueinander */
+    gap: 15px;               /* Abstand zwischen LIVE und Text */
+    width: 100%;
+    margin: 15px 0 15px 35px;
+
+    font-size: 0.95rem;
+}
+
+.live-indicator {
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: 900;
+    color: var(--pearl);
+    background-color: var(--blood);
+
+    font-size: 0.75rem;
+    padding: 3px 6px;
+    border-radius: 4px;
+}
+
+.locationInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Linksbündig */
+}
+
+.locationTitle {
+    color: var(--stone);
+    font-weight: 900;
+}
+
+.locationStatus {
+    color: var(--bright-stone);
+    font-weight: 600;
+}
+
+/* Close-Button */
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--fog);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close-button::before,
+.close-button::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 3px;
+    background-color: var(--stone);
+    border-radius: 3px;
+}
+
+.close-button::before {
+    transform: rotate(45deg);
+}
+
+.close-button::after {
+    transform: rotate(-45deg);
+}
+
+/* Wochentag und Pfeil-Buttons */
+.day-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 20px; /* Abstand zwischen Pfeilen und Text */
+}
+
+/* Wochentag */
+#currentDayDisplay {
+    font-family: 'Roboto Slab', serif;
+    color: var(--stone);
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    min-width: 100px; /* Damit es nicht springt bei kurzen/langen Wörtern */
+}
+
+/*  Pfeil-Buttons */
+.nav-btn {
+    color: var(--stone);
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    color: var(--blood);
+}
+
+canvas {
+    margin: auto
+}
+
+/* Verstecke Zoom-Controls auf Touch-Geräten */
+@media (pointer: coarse) {
+    .leaflet-control-zoom {
+        display: none !important;
+    }
+}
+
+/* - - - - - - - - About - - - - - - - */
+
+.info-page {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.info-container {
+    width: 100%;
+}
+
+.who-we-are {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.teamMembers {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px;
+    width: 100%;
+}
+
+.teamMembers img {
+    border-radius: 125px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.teamMembers p {
+    font-weight: 450;
+    margin-top: 15px;
+}
+
+.about h2,
+.about p {
+    margin-top: 5px;
+}
+
+.about .fliesstext {
+    margin-bottom: 10px;
+}
+
+.back-to-web-app {
+    background: var(--blood);
+    color: var(--pearl);
+
+    padding: 12.5px;
+    width: 100%;
+}
