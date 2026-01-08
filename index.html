@@ -1,0 +1,62 @@
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velogeier</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon -->
+
+    <!-- Fonts -->
+        <!-- Roboto -->
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <!-- Roboto Slab -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- styles -->
+    <link rel="stylesheet" href="css/master.css" />
+    <link rel="stylesheet" href="css/mobile.css" />
+    <link rel="stylesheet" href="css/tablet.css" />
+    <link rel="stylesheet" href="css/desktop.css" />
+    <!--leaflet Karte-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+     <!--Chart-->
+     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="index-header">
+        <img class="Header-Logo" src="./img/velogeier_textmarke.svg" alt="Velogeier Logo">
+        <a href="info.html" class="info">i</a>
+    </header>
+    <main class="web-app-page">
+        <div id="map"></div>
+        <div class="chart-wrapper">
+            <div class="close-button"></div>
+            <div class="location">
+                <p class="live-indicator">LIVE</p>
+                <div class="locationInfo">
+                    <span class="locationTitle"><p id="locationTitle">Standort wählen</p></span>
+                    <span class="locationStatus"><p id="locationStatus">Warten auf Standort</p></span>
+                </div>
+            </div>
+            <div class="day-controls">
+                <button id="prevDay" class="nav-btn">&#10094;</button> 
+                <span id="currentDayDisplay">Wochentag</span>
+                <button id="nextDay" class="nav-btn">&#10095;</button>
+            </div>
+            <canvas id="veloChart"></canvas>
+        </div>
+    </main>
+
+
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin="">
+    </script>
+    <script src="js/script.js"></script>
+</html>
