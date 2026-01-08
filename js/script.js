@@ -244,7 +244,7 @@ async function loadData(locationName) {
                 element.style.color = "#B6B4A5";
             } 
             else {
-                statusText = "Genau so viele Velos wie gewöhnlich";
+                statusText = "Genau so viele Velos wie üblich";
                 element.style.color = "#B6B4A5";
             }
             element.innerText = statusText;

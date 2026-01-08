@@ -1,2 +1,2 @@
 # Interaktive-Medien-3
-test
+Ein Projekt von Tim Eberhard und Carlo Pierotto
